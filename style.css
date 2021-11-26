@@ -118,7 +118,60 @@ h3 { clear: both; font-size: 1.1em; color: #000; background: #fff url(images/h3b
 
 /*       */
 	
+#left {
+	float: left;
+	width: 250px;
+}
+	.box {
+		padding: 3px 15px;
+		border: 1px solid #ccc;
+		margin: 12px 0 10px 10px;
+	}
+	.note {
+		padding: 15px 15px 20px 100px;
+		border: 1px solid #CFCB66;
+		margin: 0 0 5px 10px;
+		background: #FFFFAD url(images/package.gif) no-repeat;
+		color: #585616;
+	}
 
+
+#right {
+	float: right;
+	width: 643px;
+}
+
+.djathtcol { 
+	float: right; 
+	padding: 120px 50px;
+	width: 350px; 
+	
+	margin: -100px 0 0px 0px;
+}
+
+	.leftcol { 
+		float: left; 
+		padding: 12px 15px;
+		width: 285px; 
+		border:#ccc 1px solid;
+		text-align: justify;
+		margin: 0 0 10px 0;
+	}
+	.rightcol { 
+		float: right; 
+		padding: 10px 15px;
+		width: 285px; 
+		border:#ccc 1px solid;
+		margin: 0 0 10px 0;
+		}
+	.special {
+		clear: both;
+		margin:0px 0 20px 0;	
+		padding: 5px 20px;
+		border: 1px solid #ccc;
+		background: #eee;
+		color: #444;
+	}
 
 /* FOOTER */
 
