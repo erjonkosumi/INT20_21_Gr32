@@ -10,10 +10,30 @@ body {
   background-repeat: repeat-x;
 }
 </style>
-<script type="text/javascript" src="script.js"> </script>
+<script>  
+  function validateform(){  
+  var username=document.myform.username.value;  
+  var password=document.myform.password.value;  
+    
+  if (username==null || username==""){  
+    alert("Name can't be blank");  
+    return false;  
+  }else if(password.length<6){  
+    alert("Password must be at least 6 characters long.");  
+    return false;  
+    }
+    else if(password.length>20){  
+    alert("Password must not be more than 20 characters long.");  
+    return false;
+    }
+    else {
+      return true;
+    }
+  }  
+  </script>  
 </head>
 <body>
-    
+    <script>alert("Be careful, there are username and password requirements!");</script>
 <div id="main">
   <div id="logo">
     <h1>Artificial <span class="blue">Intelligence</span></h1>
@@ -58,13 +78,13 @@ body {
   <div id="error">
   <div class = "djathtassoc">
 
-    <form id="form" action="/" method="GET">  
+    <form name="myform" method="post" action="" onsubmit="return validateform()" autocomplete="on">  
         <div class="container">   
             <label>Username : </label>   
-            <input type="text" placeholder="Enter Username" name="username" required>  
+            <input type="text" placeholder="Enter Username" name="username">  
             <label>Password : </label>   
-            <input type="password" placeholder="Enter Password" name="password" required>  
-            <button style="margin:5px;" type ="submit">Login</button>   
+            <input type="password" placeholder="Enter Password" name="password">  
+            <input style="margin:5px;" type ="submit">Login</button>   
             <input type="checkbox" checked="checked"> Remember me   
               
 
