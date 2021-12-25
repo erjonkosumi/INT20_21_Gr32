@@ -12,7 +12,12 @@
       text-shadow: 0.5px 0.5px #0e1df1;
     }
     
-
+    body {
+ 
+ 
+ 
+  animation: change-background 8s ease infinite;
+}
 
     @font-face {
       font-family: customFont;
@@ -23,9 +28,23 @@
       font-family: customFont;
     }
 
+    @keyframes change-background {
+  0% {
+    background: #5eb4ec;
+  }
+  50% {
+    background: #07a182;
+  }
+  100% {
+    background: #d3ec8c;
+  }
+}
 </style>
 </head>
 <body>
+
+
+  
 <div id="main">
   <div id="logo">
     <h1>Artificial <span class="blue">Intelligence</span></h1>
