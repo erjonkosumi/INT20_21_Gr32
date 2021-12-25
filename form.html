@@ -46,14 +46,31 @@
   <div class="djathtcol">
     <h3>You can write us a message too!</h3>
     
-    <form>      
-        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-        <input name="email" type="text" class="feedback-input" placeholder="Email" />
+    <form oninput="x.value=parseInt(a.value)">      
+        <input name="name" type="text" class="feedback-input" placeholder="Name" /> 
+        Age <input type="range" placeholder ="Age" id="a" value="20">
+        =<output name="x" for="a b"></output>
+        <Br>
+         <label for="ice-cream-choice">Gender:</label>
+        <input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+        
+        <datalist id="ice-cream-flavors">
+            <option value="Male">
+            <option value="Female">
+            <option value="Rather not tell">
+        
+        </datalist>  
+        <Br>
+
+        <br> <input name="email" type="text" class="feedback-input" placeholder="Email" />
         <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-        <input type="submit" value="SUBMIT"/>
+ 
+       <br> <input type="submit" value="SUBMIT"/>
+
       </form>
   </div>
   <div id="right">
+
 
   <div id="footer">
    <p>&copy; Copyright <a href="index.html">AI Simulation Integrations</a> 2021</a> &middot;</p>
