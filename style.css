@@ -126,6 +126,14 @@ h3 { clear: both; font-size: 1.1em; color: #000; background: #fff url(images/h3b
 	
 	}
 
+	.center2 {
+		margin: 252px 5px 72px 432px;
+		width: 350px;
+		
+		
+		
+		}
+
 #left {
 	float: left;
 	width: 250px;
@@ -316,6 +324,15 @@ textarea {
   font-weight:700;
 }
 [type="submit"]:hover { background:#105469; }
+
+
+
+  .rotated {
+	transform: rotate(45deg); 
+	background-color: pink;
+  }
+
+
 /* FOOTER */
 
 
