@@ -4,10 +4,87 @@
 <title>Artificial Intelligence</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
 
+$(document).ready(function(){
+  $("th").click(function(){
+    $("th").hide("slow");
+  });
+  $("td").click(function(){
+    $("th").show("slow");
+  });
+});
+
+  </script>
+
+<script>
+function Counter(options) {
+    var timer;
+    var instance = this;
+    var seconds = options.seconds || 10;
+    var onUpdateStatus = options.onUpdateStatus || function() {};
+    var onCounterEnd = options.onCounterEnd || function() {};
+    var onCounterStart = options.onCounterStart || function() {};
+
+    function decrementCounter() {
+        onUpdateStatus(seconds);
+        if (seconds === 0) {
+            stopCounter();
+            onCounterEnd();
+            return;
+        }
+        seconds--;
+    };
+
+    function startCounter() {
+        onCounterStart();
+        clearInterval(timer);
+        timer = 0;
+        decrementCounter();
+        timer = setInterval(decrementCounter, 1000);
+    };
+
+    function stopCounter() {
+        clearInterval(timer);
+    };
+
+    return {
+        start : function() {
+            startCounter();
+        },
+        stop : function() {
+            stopCounter();
+        }
+    }
+};
+
+var countdown = new Counter({
+    // numri i sekondave per permbushjen e kushtit
+    seconds: 8,
+
+    onCounterStart: function () { 
+       alert("This page will re-direct you to our university web-page.")
+    },
+
+
+
+    // callback funksioni i fundit
+    onCounterEnd: function() {
+        // paraqet mesazhin qe sesioni po permbushet
+        alert("Now it's time.")
+        window.open("https://fiek.uni-pr.edu/");
+    }
+});
+countdown.start();
+</script>
 
 </head>
 <body>
+
+
+
+
 <div id="main">
   <div id="logo">
     <h1>Artificial <span class="blue">Intelligence</span></h1>
@@ -105,10 +182,7 @@
     <p id="demo2"></p>
  </center>
 <script>
-var i = 5;
-for (var i = 0; i < 10; i++) {
-  // some statements
-}
+
 document.getElementById("demo").innerHTML = "Wowee Mip - $111.99/pc";
 document.getElementById("demo1").innerHTML = "Orbotix Ollie - $98.99/pc";
 document.getElementById("demo2").innerHTML = "iRobot Crate 2 - $299.99/pc";
@@ -120,6 +194,8 @@ document.getElementById("demo2").innerHTML = "iRobot Crate 2 - $299.99/pc";
 
     <div id="right">
   <div id="footer">
+
+   
     <p>&copy; Copyright <a href="index.html">AI Simulation Integrations</a> 2021 &middot;</a></p>
 
 </div>
