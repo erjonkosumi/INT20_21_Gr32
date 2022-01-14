@@ -187,13 +187,27 @@ countdown.start();
    <center>  <p id="demo"></p>
     <p id="demo1"></p>
     <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
  </center>
 <script>
 
+function Therobot(model, price) {
+  this.model = model;
+  this.price = price;
+
+}
+
+const roboti = new Therobot("Alexa",499.99);
+const roboti2 = new Therobot("Philips cleaner",235.99);
+const roboti3 = new Therobot("AI plane", 4339.99);
 document.getElementById("demo").innerHTML = "Wowee Mip - $111.99/pc";
 document.getElementById("demo1").innerHTML = "Orbotix Ollie - $98.99/pc";
 document.getElementById("demo2").innerHTML = "iRobot Crate 2 - $299.99/pc";
-
+document.getElementById("demo3").innerHTML= roboti.model + " - $" + roboti.price + "/pc";
+document.getElementById("demo4").innerHTML= roboti2.model + " - $" + roboti2.price + "/pc";
+document.getElementById("demo5").innerHTML= roboti3.model + " - $" + roboti.price + "/pc";
 
 </script>
 
@@ -211,3 +225,4 @@ document.getElementById("demo2").innerHTML = "iRobot Crate 2 - $299.99/pc";
 
 </body>
 </html>
+
