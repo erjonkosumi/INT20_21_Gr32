@@ -9,11 +9,18 @@
 
 $(document).ready(function(){
   $("th").click(function(){
-    $("th").hide("slow");
+    $("th").hide("slow",function(){
+      alert("Table header is now hidden.");
+    });
   });
   $("td").click(function(){
     $("th").show("slow");
   });
+});
+
+$(document).ready(function()
+{
+  $("p").remove(".cmimet");
 });
 
   </script>
@@ -129,7 +136,7 @@ countdown.start();
 
 
 
-    <center><p></p></center>
+    <center><p class="cmimet">We have very fair prices!</p></center>
 
  
 
