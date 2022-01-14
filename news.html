@@ -12,6 +12,14 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $("#seti").click(function(){
+    $("#seti").attr({
+      "href" : "https://www.amazon.com/s?k=robots&crid=314OW304C20G6&sprefix=robot%2Caps%2C385&ref=nb_sb_noss_1",
+    });
+  });
+});
+
 </script>
 
 <style>
@@ -95,7 +103,7 @@ $(document).ready(function(){
   </section>
   
   <section>
-      <h2>How much does it cost?</h2>
+      <h2><a href="www.amazon.com" id="seti">How much does it cost?</a></h2>
       <div id="fonti"> The price has yet to be announced!</div>
   </section>
 
